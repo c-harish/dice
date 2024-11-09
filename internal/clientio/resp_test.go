@@ -27,7 +27,6 @@ func TestSimpleStringDecode(t *testing.T) {
 		if v != value {
 			t.Fail()
 		}
-		fmt.Println(v, value)
 	}
 }
 
