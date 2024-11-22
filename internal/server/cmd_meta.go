@@ -443,6 +443,10 @@ var (
 		Cmd:     "GEODIST",
 		CmdType: SingleShard,
 	}
+	geoRadiusByMemberCmdMeta = CmdsMeta{
+		Cmd:     "GEORADIUSBYMEMBER",
+		CmdType: SingleShard,
+	}
 	// Metadata for multishard commands would go here.
 	// These commands require both breakup and gather logic.
 
@@ -569,5 +573,6 @@ func init() {
 	WorkerCmdsMeta["RESTORE"] = restoreCmdMeta
 	WorkerCmdsMeta["GEOADD"] = geoaddCmdMeta
 	WorkerCmdsMeta["GEODIST"] = geodistCmdMeta
+	WorkerCmdsMeta["GEORADIUSBYMEMBER"] = geoRadiusByMemberCmdMeta
 	// Additional commands (multishard, custom) can be added here as needed.
 }
